@@ -19,7 +19,7 @@ def change_start_state(state):
 @dp.message_handler(commands=["start"])
 async def start_command(message: types.Message):
     change_start_state(cf.state)
-    await message.reply(cf.state)
+    await message.reply(cf.start_message)
 
 @dp.message_handler(commands=["help"])
 async def help_command(message: types.Message):
